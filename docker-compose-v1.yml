@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  vehicle_manager:
+    image: fleetmgr:dev
+    volumes:
+      - ./vehicle_manager:/app
+    network_mode: host
+  fleet_server:
+    image: fleetserver:dev
+    volumes:
+      - ./fleet_server:/app/server
+    command: --quiet --syslog
+    network_mode: host
+

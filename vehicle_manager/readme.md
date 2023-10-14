@@ -14,6 +14,7 @@
 
 # Commands executed for tracking
 ## Build a docker
+> docker build -t fleetmgr:dev .
 
 ## Run a docker image on the host network, and
 > docker run --network host -d -p 5000:5000 -it fleetmgr:dev

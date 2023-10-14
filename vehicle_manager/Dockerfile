@@ -9,10 +9,5 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-
-# create working directory
-
-# install dependencies
-# RUN npm install
-# RUN npx create-react-app fleet-management-app
+ENTRYPOINT [ "python", "fleet_manager.py" ]
 
