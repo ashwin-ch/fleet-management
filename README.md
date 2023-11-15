@@ -16,8 +16,28 @@ Possible expansion for
 - Site statistics
 
 # Technical specification
-The solution is developed based on microservices executing on docker images, there are two microservices running, i.e. fleet-application and vehicle-off-board-manager. 
+The solution is developed based on microservices executing on docker images, there are two microservices running, i.e. fleet-application and vehicle-off-board-manager, along with a fleet-server. 
 
 The purpose of fleet-application is to provide interface for site-operators to find the list of vehicles and their statistics on a web-ui. While the vehicle-off-board-manager provides ability for vehicle to connect with the server to push and pull data. This manager has the ability to push goals and target site activities like loading, dumping etc. while also allows vehicle to push notification on service required, driver details, vehicle status. There is a simple node json.server deployed in the background, which is a centralized between both the applications to fetch and update information spontaneously. 
 
 The fleet-application is developed based on node.js and also provides view for end users. While the vehicle-off-board-manager is developed based on flask-py interfacing and closing working with json server to update vehicle information. 
+
+
+
+
+# Handy Command for local debugging
+
+## Building docker locally
+
+### TBD
+
+## Starting docker for server and various services
+
+Starting a fleet-server 
+> $ docker run --network host -d -it fleetserver:dev
+
+Start a fleet-application
+
+
+Start a vehicle-off-board-manager
+
