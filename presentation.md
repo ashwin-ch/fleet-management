@@ -37,7 +37,7 @@
 
 # Future scope
 - *Fleet Server*
-  - Migration to MongoDb(_adv. of having each vehicle as a part of collection and scalable approach_)
+  - [ ] Migration to MongoDb(_adv. of having each vehicle as a part of collection and scalable approach_)
 
 - *Fleet offboard manager*
   - User management and login
