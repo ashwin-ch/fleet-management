@@ -3,13 +3,18 @@
 - Functions/Features
   - Machinery vehicle dashboard
   - Equipment management system
-  -
-- Tools
+
+# Design overview
+![Deployment architecture](image.png)
+
+# Tools
   - Node JS _(Vehicle management Frontend dashboard)_
   - Json Server _(vehicle database)_
   - Docker _(Dev and deployment provisioning)_
   - K8s _(Orchestration)_
   - Minikube _(cloud deployment virutualization)_
+
+--------
 
 
 --------
