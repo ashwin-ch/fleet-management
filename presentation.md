@@ -2,6 +2,7 @@
 - Scope - Fleet management offboard application
 - Functions/Features
   - Machinery vehicle dashboard
+  - Driver management
   - Equipment management system
 
 # Design overview
