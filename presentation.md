@@ -16,9 +16,6 @@
 
 --------
 
-
---------
-
 # Demostration
 - Local docker execution
 - Kubernetes deployment (_Having difficulties in getting this working_)

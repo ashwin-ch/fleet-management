@@ -30,15 +30,11 @@ The fleet-application is developed based on node.js and also provides view for e
 
 
 
-## Building docker locally
-### TBD
 
 ## Start minikube and ensure pods are running
 
 Start minikube
-> $ minikube start
->
->
+> $ minikube start>
 Check running nodes with minikube a part of it
 > $ kubectl get nodes
 Start a k8 dashboard in a separate terminal
