@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import requests
 import json
+import logging
 
 app = Flask(__name__)
 
@@ -63,6 +64,7 @@ def partial_update_item(item_id):
 
 @app.route('/get_vehicles', methods=['GET'])
 def get_vehicles():
+    print("Get vehicle(s) request received")
     # Make a GET request to the API
     response = requests.get(server_url)
     # Check the response status code
@@ -76,6 +78,7 @@ def get_vehicles():
 
 @app.route('/get_vehicle/<vehicleid>', methods=['GET'])
 def get_vehicle(vehicleid):
+    logging.info('vehicle id requested %s', vehicleid)
     response = requests.get(server_url)
     vehicle_data = {}
     # Check the response status code
@@ -216,4 +219,5 @@ def update_vehicle_serv_required(vehicle_id):
 
 
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO)
     app.run(debug=True)

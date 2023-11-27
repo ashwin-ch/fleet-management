@@ -20,3 +20,4 @@ RUN npm install -g json-server
 
 RUN npm install
 
+ENTRYPOINT [ "npm", "run", "start"]

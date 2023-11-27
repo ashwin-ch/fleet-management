@@ -7,7 +7,22 @@ import equipmentsData from './component/data/equipments.json';
 
 
 function App() {
-  const url = "http://localhost:8081/vehicles"
+  console.log("trying to connect localhost:4000/vehicles");
+  // testing
+  const socket = require("socket.io-client")("http://fleet-service:4000/vehicles");
+  const socket_1 = require("socket.io-client")("http://0.0.0.0:4000/vehicles");
+  const socket_2 = require("socket.io-client")("http://10.244.0.75:4000/vehicles");
+
+  socket.on("connect_error", (err) => {
+    console.log(`connect_error due to ${err.message}`);
+  });
+  socket_1.on("connect_error", (err) => {
+    console.log(`connect_error due to ${err.message}`);
+  });
+  socket_2.on("connect_error", (err) => {
+    console.log(`connect_error due to ${err.message}`);
+  });
+  const url = "http://10.244.0.75:4000/vehicles"
   const [data, setData] = useState([])
   useEffect(() => {
     getVehicles()

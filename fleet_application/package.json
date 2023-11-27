@@ -10,7 +10,8 @@
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "2.1.4"
+    "web-vitals": "2.1.4",
+    "socket.io-client": "latest"
   },
   "scripts": {
     "start": "react-scripts start",

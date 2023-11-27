@@ -12,4 +12,5 @@ COPY . .
 # install json-server
 RUN npm install -g json-server
 
-ENTRYPOINT [ "json-server", "--watch", "db.json", "--port", "4000", "--host", "0.0.0.0" ]
+# removing the below configuration to enable json-server working in kubernetes
+ENTRYPOINT [ "json-server", "--watch", "db.json", "--port", "4000"]

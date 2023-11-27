@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fleet-deployment            # name of the deployment
+spec:
+  replicas: 1
+  selector:                         # name using which deployment finds pods to be managed
+    matchLabels:
+      app: fleetserver
+  template:
+    metadata:
+      labels:
+        app: fleetserver
+    spec:
+      containers:
+      - name: fleetserver
+        image: aganesa2/fleetserver:dev      # name of the container which needs to be deployed
+        ports:
+        - containerPort: 4000
+      - name: fleetmgr
+        image: fleetmgr:dev      # name of the container which needs to be deployed
+        imagePullPolicy: Never      # Never used because we have the images build locally
+        ports:
+        - containerPort: 3000
+      - name: vehiclemgr
+        image: vehiclemgr:dev      # name of the container which needs to be deployed
+        imagePullPolicy: Never      # Never used because we have the images build locally
+        ports:
+        - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fleet-service
+  labels:
+    app: fleetserver
+spec:
+  type: LoadBalancer
+  ports:
+  - name: http
+    port: 3000
+    nodePort: 30001
+    protocol: TCP
+  - name: server
+    port: 4000
+    nodePort: 30002
+    protocol: TCP
+  selector:
+    app: fleetserver
+---
