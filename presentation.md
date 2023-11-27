@@ -40,12 +40,17 @@
   - [ ] Migration to MongoDb(_adv. of having each vehicle as a part of collection and scalable approach_)
 
 - *Fleet offboard manager*
-  - User management and login
-  - Vehicle assignment schedule
-  - Vehicle performance dashboard
-  - Vehicle diagnostics
+  - [ ] User management and login
+  - [ ] Vehicle assignment schedule
+  - [ ] Vehicle performance dashboard
+  - [ ] Vehicle diagnostics
 
 - *Vehicle Offboard Agent*
-  - Assignment schedule for vehicles
+  - [ ] Autonomous vehicle assignments
+  - [ ] Fuel management
+  - [ ] Post vehicle errors
+  - [ ] Update driver schedules
+  - [ ] Driver monitoring
+
 
 # Q&A
