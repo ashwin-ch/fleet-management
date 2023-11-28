@@ -33,7 +33,7 @@ Possible expansion for
 
 
 # Design overview
-![Deployment architecture](image.png)
+![Deployment architecture](image_v2.png)
 
 
 # Technical specification
