@@ -7,7 +7,10 @@
 
 # Link to project
 Below repository contains the project along with deployment yaml manifests.
-https://github.com/ashwin-ch/fleet-management/tree/main
+
+[github:fleet-management-repo](https://github.com/ashwin-ch/fleet-management/tree/main)
+
+
 
 # Project overview
 Fleet management system for machinery vehicles enables operation and maintenance of vehicles deployed in a site.
@@ -19,6 +22,7 @@ Provides insight on,
 - Vehicle identity
 - Vehicle accessories
 - Vehicle active status
+- Interaction between vehicle and offboard agent
 
 Possible expansion for
 - Fleet statistics
