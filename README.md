@@ -55,6 +55,17 @@ Vehicle manager is a microservice deployed in order to bridge between the off-bo
 This provides REST Calls for vehicle to connect, get information about the vehicle assignment, map data and upload vehicle diagnostics data, fuel statistics, payload statistics and assignment status for autonomous control vehicles. For this prototype, we use CURL commands to connect to the vehicle-agent as experiement, while the on-board device on machine can use RestAPIs to communicate with vehicle-off-board-agent.
 
 
+# Docker images
+
+## Fleet server
+[aganesa2/fleetserver:dev](https://hub.docker.com/repository/docker/aganesa2/fleetserver/general)
+
+## Fleet manager
+[aganesa2/fleetserver:dev](https://hub.docker.com/repository/docker/aganesa2/fleetmgr/general)
+
+## Vehicle manager
+[aganesa2/vehiclemgr:dev](https://hub.docker.com/repository/docker/aganesa2/vehiclemgr/general)
+
 
 ## Start minikube and ensure pods are running
 Start minikube
