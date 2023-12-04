@@ -95,3 +95,10 @@ To delete a deployment created in K8s
 > $ kubectl delete -n default deployment fleet-deployment
 
 The dashboard should be able to provide insights on the deployment, pods, services and logs.
+
+# Questions & discussion: 
+## Benefits and challenges behind the architecture pattern being used?
+Microservice architecture is well-known for large application software developed in different environments and toolchains, while integrated provides an enterprise solution or a large-scale application. This model or architecture provides the flexibility to develop sm¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨                                                                                                        
+                                     aller stateless applications that can function independently and have the ability to be deployed and scaled on a larger scale. In particular, we have utilized the decomposition type of the coarse gain model, which provides the encapsulation of broader capabilities in terms of business and the ability to have many smaller components internally. The communication incorporated is asynchronous to have the ability to provide events and message queue mechanisms for communication. This allows services to operate independently.
+This design or architecture enables cross-functional teams to choose toolch9ain, and build systems and programming methods based on the criteria. 
+In our use case While a web-GUI-based application can be developed in node.js, while the vehicle agents can be developed in Flask, an extension based on Python.  enables the on-board team developing embedded applications to also develop a service that can be deployed on a cloud and also maintain the interfaces between the fleet and the server(domain).  
