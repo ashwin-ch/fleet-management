@@ -98,7 +98,30 @@ The dashboard should be able to provide insights on the deployment, pods, servic
 
 # Questions & discussion: 
 ## Benefits and challenges behind the architecture pattern being used?
-Microservice architecture is well-known for large application software developed in different environments and toolchains, while integrated provides an enterprise solution or a large-scale application. This model or architecture provides the flexibility to develop sm¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨                                                                                                        
-                                     aller stateless applications that can function independently and have the ability to be deployed and scaled on a larger scale. In particular, we have utilized the decomposition type of the coarse gain model, which provides the encapsulation of broader capabilities in terms of business and the ability to have many smaller components internally. The communication incorporated is asynchronous to have the ability to provide events and message queue mechanisms for communication. This allows services to operate independently.
-This design or architecture enables cross-functional teams to choose toolch9ain, and build systems and programming methods based on the criteria. 
-In our use case While a web-GUI-based application can be developed in node.js, while the vehicle agents can be developed in Flask, an extension based on Python.  enables the on-board team developing embedded applications to also develop a service that can be deployed on a cloud and also maintain the interfaces between the fleet and the server(domain).  
+Microservice architecture is well-known for large application software developed in different environments and toolchains, 
+while integrated provides an enterprise solution or a large-scale application. This model or architecture provides the flexibility to develop smaller, stateless applications that can function independently and have the ability to be deployed and scaled on a larger scale. 
+In particular, we have utilized the decomposition type of the coarse gain model, which provides the encapsulation of broader capabilities in terms of business and the ability to have many smaller components internally. 
+The communication incorporated is asynchronous to have the ability to provide events and message queue mechanisms for communication. This allows services to operatindependently.
+This design or architecture enables cross-functional teams to choose toolchain, and build systems and programming methods based on the criteria. 
+In our use case a web-cline application can be developed in node.js, while the vehicle agents can be developed in FlaskPy, an extension based on Python. 
+This enables the on-board team developing embedded applications to also develop a service that can be deployed on cloud and also maintain the interfaces between the fleet(vehicles) and the server(domain). 
+
+## Challenges encountered during design and development of the application
+- Creating a network composition and configuring the cluster, nodes and pods with regards to the configuration has been a hazzel in the beginning
+- Choosing the right type of database skeleton 
+
+## How to mitigate the challenges
+- Creating a network architecture for the project based on requirements and scope would help us identify the list of techniques and services we need to incorporate to achieve a better deployment model. 
+- Finding the right form of database which is suitable for project scope, lifetime and use-case would help us achieve scalability of the application
+- Also drafting and designing the intended network policies based on the project requirements is required to have stable and secure deployment model. 
+- Have a logical architecture sketch in order to identify the logical elements present in the project. And decompose the logical elements into system/software elements and configurations. 
+
+## Security aspects in current design
+We haven't incorporated any security mechanism in the current design, but based on the knowledge and understanding, security has to be incorporated in different level within cloud infrastructure, i.e, underlaying infrastructure, Kubernetes level and application level, since attack can happen at any level. 
+
+Basic level of security can be achieve by creating the image from secure sources so the image is stable and secure without unauthorized traces or doesn't contains untrusted registries. 
+Run applciations with appropriate user access in-order to avoid unintended access rights and ability to perform vulnurable tasks. Creating necessary user-groups and corresponding permissions will enhance the execution and regulate the access to Kubernetes. Also having role based access configuration helps to better streamline and protection towards the data or application. 
+
+Another main aspect of security is, `etcd` every metadata or information regards to the cluster is maintained here. And it is very important to protect or secure this. `etcd` can be maintained inside or outside the cluster. While having inside the cluster, we can introduce a firewall to protect the `etdc`. Also by encrypting the `etcd`, the data can be protected from unintentded attack. And finally the application and its interfaces and APIs needs to be secured, eg. Ingress controller which can provide Security over http and other techniques like SSL and TSL. 
+
+Also it is required to have a backup and recovery mechanism incorporated as part of the CI/CD pipelies would be benefial and value. 
